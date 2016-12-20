@@ -8,7 +8,7 @@ object Exercise5 extends App {
 
   val finder = new Finder()
 
-  def valueToUpper(key: Int = Random.nextInt(10)): Option[String] = ???
+  def valueToUpper(key: Int = Random.nextInt(10)): Unit = ???
 
-  valueToUpper(1).map(println(_)) //ONE
+  valueToUpper(1) //ONE
 }

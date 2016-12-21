@@ -1,13 +1,15 @@
 package exercises.scala
 
-sealed trait Expression
 
-case class Const(value: Int) extends Expression
-case class Sum(exp1: Expression, expr2: Expression) extends Expression
+sealed trait Tree
+
+case class Node(data: Int, left: Tree, right: Tree) extends Tree
+case object Leaf extends Tree
+
 
 object Exercise4 extends App {
-  def evaluate(expr: Expression): Int = ???
+  def leafCount(t: Tree): Int = ???
 
-  val expr: Expression = Sum(Const(5), Sum(Const(1), Sum(Const(3), Const(2))))
-  println(evaluate(expr)) // 11
+  val tree: Tree = Node(1, Node(2, Leaf, Node(3, Leaf, Leaf)), Leaf)
+  println(leafCount(tree))  // 4
 }

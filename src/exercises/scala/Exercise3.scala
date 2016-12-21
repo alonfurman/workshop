@@ -1,15 +1,9 @@
 package exercises.scala
 
-
-sealed trait Tree
-
-case class Node(data: Int, left: Tree, right: Tree) extends Tree
-case object Leaf extends Tree
-
-
 object Exercise3 extends App {
-  def leafCount(t: Tree): Int = ???
+  val keywords = List("Apple", "Ananas", "Mango", "Banana", "Beer")
 
-  val tree: Tree = Node(1, Node(2, Leaf, Node(3, Leaf, Leaf)), Leaf)
-  println(leafCount(tree))  // 4
+  def aggregateByFirstLetter(lst: List[String]): Map[Char, List[String]] = ???
+
+  println(aggregateByFirstLetter(keywords)) // Map(M -> List(Mango), A -> List(Ananas, Apple), B -> List(Banana, Beer))
 }

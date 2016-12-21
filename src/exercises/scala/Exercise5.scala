@@ -1,14 +1,13 @@
 package exercises.scala
 
-import exercises.java.Finder
+sealed trait Expression
 
-import scala.util.Random
+case class Const(value: Int) extends Expression
+case class Sum(exp1: Expression, expr2: Expression) extends Expression
 
 object Exercise5 extends App {
+  def evaluate(expr: Expression): Int = ???
 
-  val finder = new Finder()
-
-  def valueToUpper(key: Int = Random.nextInt(10)): Unit = ???
-
-  valueToUpper(1) //ONE
+  val expr: Expression = Sum(Const(5), Sum(Const(1), Sum(Const(3), Const(2))))
+  println(evaluate(expr)) // 11
 }

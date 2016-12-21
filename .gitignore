@@ -20,4 +20,3 @@ project/plugins/project/
 .idea/
 .gitignore
 workshop.iml
-src/solutions/*
